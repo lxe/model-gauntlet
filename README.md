@@ -131,6 +131,6 @@ Your numbers will differ somewhat from these: hosts, load and the time limit all
 - **`judge`, `judge-hard`:** built by code from `extract`-style rows (train and validation, not the test rows above).
 - **`grayzone`:** public Ethereum mainnet transfers. The phishing labels come from Forta's [labelled-datasets](https://github.com/forta-network/labelled-datasets) (MIT). Addresses are shown only as roles (CUSTOMER, DEST); the transfer's own facts and its history are described in text.
 
-Charts in [`docs/img`](docs/img) are drawn from `results/2026-10-16`.
+Charts in [`docs/img`](docs/img) are drawn from `results/2026-10-16` by [`scripts/charts.py`](scripts/charts.py) (`python3 scripts/charts.py`, standard library only).
 
 Code and data: MIT ([LICENSE](LICENSE)).
