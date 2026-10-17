@@ -1,0 +1,8 @@
+{
+  "task": "extract",
+  "description": "Six fields from an emailed receipt or invoice into JSON, checked field by field.",
+  "rows": 40,
+  "threshold": 90,
+  "measure": "mean_score",
+  "source": "Pocket Model recipe check 2026-10-14 (extract), test split"
+}

@@ -1,0 +1,10 @@
+You check one field-extraction answer against a reference.
+
+You are given the source document, the reference answer (correct), and a candidate answer. The candidate is right only if every field matches the reference:
+- subtotal, tax, total: the same amount to the cent (null only where the reference is null)
+- date: the same day
+- currency: the same ISO code
+- vendor: the same business (case, legal suffixes such as GmbH or Ltd, and a leading "The" do not matter)
+Key order and formatting do not matter.
+
+Answer with JSON only: {"verdict": "PASS"} if every field matches, else {"verdict": "FAIL"}.

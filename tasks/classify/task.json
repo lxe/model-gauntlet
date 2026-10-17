@@ -1,0 +1,8 @@
+{
+  "task": "classify",
+  "description": "Support ticket triage: one label of five.",
+  "rows": 40,
+  "threshold": 100,
+  "measure": "mean_score",
+  "source": "Pocket Model recipe check 2026-10-14 (classify), test split"
+}

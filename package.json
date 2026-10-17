@@ -1,0 +1,16 @@
+{
+  "name": "model-gauntlet",
+  "version": "0.1.0",
+  "description": "Cheap open models against Claude Opus as teachers, graders and judges: six code-graded tasks, every answer published",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "run": "node src/run.mjs",
+    "report": "node src/report.mjs results/2026-10-16",
+    "verify": "node src/verify.mjs"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  },
+  "engines": { "node": ">=20" }
+}

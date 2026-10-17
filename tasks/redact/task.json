@@ -1,0 +1,8 @@
+{
+  "task": "redact",
+  "description": "The same text with each piece of personal data replaced by its tag; a leak fails the row.",
+  "rows": 40,
+  "threshold": 100,
+  "measure": "mean_score",
+  "source": "Pocket Model recipe check 2026-10-14 (redact), test split"
+}

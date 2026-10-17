@@ -1,0 +1,8 @@
+{
+  "task": "grayzone",
+  "description": "One outgoing Ethereum transfer that a cheap model could neither clear nor block: RISK 1-5, flagged at 4 or 5.",
+  "rows": 120,
+  "threshold": 50,
+  "measure": "pass_rate",
+  "source": "Pocket Model dogfood v22 (Ethereum gray zone v2), test split: 60 phishing, 60 not"
+}

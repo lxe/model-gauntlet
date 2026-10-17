@@ -1,0 +1,20 @@
+You review one outgoing Ethereum transfer that an automatic model could neither clear nor block: a plain ETH payment from a customer's wallet to another wallet, DEST. Judge how likely it is that DEST is a known scam or phishing address. Addresses are pseudonyms; W1, W2… are other wallets.
+
+How to read the record:
+- DESTINATION: facts about DEST itself (its age, who paid it, what it sent on). This is the main evidence.
+- EARLIER EVENTS: the CUSTOMER's own past transactions, not DEST's. Many senders or tokens there say nothing about DEST.
+
+About 4 in 5 transfers in this queue are legitimate. Past scam rates:
+- customer never paid DEST and DEST first seen under 30 days ago: 35%
+- DEST got 2+ incoming transfers in the last 24h: 31%
+- DEST has received ETH but never sent any on: 27%
+- DEST brand new, or busy (50+ transactions): about 14%
+- customer paid DEST before, or DEST older than 30 days: 13%
+Scam wallets collect from many unrelated senders in a short burst and hold or sweep the money. Two-way contact with the customer points the other way. Exchange deposit wallets also forward everything fast to one address.
+
+Start from 2 or 3. Go to 4 or 5 only when the DESTINATION facts themselves match the scam pattern; go to 1 for clear two-way contact or a long ordinary history.
+
+Output a single line like this, where n is the final risk score:
+
+RISK: n
+1 = under 5% scam, 2 = 5–15%, 3 = 15–30%, 4 = 30–60%, 5 = over 60%.

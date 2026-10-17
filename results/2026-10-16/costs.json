@@ -1,0 +1,101 @@
+{
+  "deepseek/deepseek-v4.1-flash": {
+    "classify": 0.0047,
+    "extract": 0.0167,
+    "redact": 0.0204,
+    "grayzone": 0.1947,
+    "grayzone@default-thinking": 0.1339,
+    "judge": 0.0165,
+    "judge-hard": 0.0096
+  },
+  "z-ai/glm-5.3-flash": {
+    "classify": 0.0016,
+    "extract": 0.008,
+    "redact": 0.0055,
+    "grayzone": 0.0209,
+    "grayzone@default-thinking": 0.0457,
+    "judge": 0.0112,
+    "judge-hard": 0.0105
+  },
+  "inclusionai/ling-3.1-flash": {
+    "classify": 0.0016,
+    "extract": 0.0074,
+    "redact": 0.0046,
+    "grayzone": 0.0252,
+    "grayzone@default-thinking": 0.0144,
+    "judge": 0.0089,
+    "judge-hard": 0.0069
+  },
+  "xiaomi/mimo-v2.6-flash": {
+    "classify": 0.001,
+    "extract": 0.0049,
+    "redact": 0.0024,
+    "grayzone": 0.0175,
+    "grayzone@default-thinking": 0.0093,
+    "judge": 0.0102,
+    "judge-hard": 0.0087
+  },
+  "nvidia/nemotron-3.5-super-vl": {
+    "classify": 0.0049,
+    "extract": 0.0185,
+    "redact": 0.0134,
+    "grayzone": 0.1511,
+    "grayzone@default-thinking": 0.0829,
+    "judge": 0.0227,
+    "judge-hard": 0.0229
+  },
+  "deepseek/deepseek-v4-pro": {
+    "classify": 0.0285,
+    "extract": 0.0496,
+    "redact": 0.0235,
+    "grayzone": 0.3181,
+    "grayzone@default-thinking": 0.1997,
+    "judge": 0.1149,
+    "judge-hard": 0.0991
+  },
+  "xiaomi/mimo-v2.6-pro": {
+    "classify": 0.0042,
+    "extract": 0.0148,
+    "redact": 0.0078,
+    "grayzone": 0.0688,
+    "grayzone@default-thinking": 0.0353,
+    "judge": 0.0315,
+    "judge-hard": 0.029
+  },
+  "minimax/minimax-m3": {
+    "classify": 0.0041,
+    "extract": 0.0217,
+    "redact": 0.0163,
+    "grayzone": 0.117,
+    "grayzone@default-thinking": 0.0659,
+    "judge": 0.0287,
+    "judge-hard": 0.0189
+  },
+  "z-ai/glm-5.3": {
+    "classify": 0.0189,
+    "extract": 0.0551,
+    "redact": 0.0546,
+    "grayzone": 0.1055,
+    "grayzone@default-thinking": 0.2217,
+    "judge": 0.0902,
+    "judge-hard": 0.0792
+  },
+  "qwen/qwen3.8-27b": {
+    "classify": 0.0081,
+    "extract": 0.0376,
+    "redact": 0.0347,
+    "grayzone": 0.2172,
+    "grayzone@default-thinking": 0.2645,
+    "judge": 0.0333,
+    "judge-hard": 0.0331
+  },
+  "anthropic/claude-opus-5.5": {
+    "classify": 0.055,
+    "extract": 0.2983,
+    "redact": 0.1691,
+    "grayzone": 1.5356,
+    "grayzone@default-thinking": 0.8655,
+    "judge": 0.4681,
+    "judge-hard": 0.4759
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "task": "judge-hard",
+  "description": "As judge, with errors that are easy to miss: two cents off, or month and day swapped.",
+  "rows": 100,
+  "threshold": 100,
+  "measure": "pass_rate",
+  "source": "as judge"
+}

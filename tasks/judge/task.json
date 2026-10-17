@@ -1,0 +1,8 @@
+{
+  "task": "judge",
+  "description": "A receipt, its reference JSON and a candidate answer: PASS or FAIL. Half right but written differently, half with one field wrong.",
+  "rows": 100,
+  "threshold": 100,
+  "measure": "pass_rate",
+  "source": "built from the extract task's train and val rows (scripts in Pocket Model's gauntlet)"
+}
