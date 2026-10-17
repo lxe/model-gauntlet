@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" role="img" aria-label="Timeouts out of 500 calls per model">
+<title>Timeouts out of 500 calls per model</title>
+<style>
+svg{--bg:#ffffff;--ink:#1f2328;--muted:#59636e;--faint:#818b98;--grid:#d1d9e0;--blue:#0969da;--opus:#bc4c00;--band:#fbefe3;--cell:#1a7f37}
+@media (prefers-color-scheme:dark){svg{--bg:#0d1117;--ink:#e6edf3;--muted:#9198a1;--faint:#7d8590;--grid:#30363d;--blue:#4493f8;--opus:#f0883e;--band:#2b1d12;--cell:#3fb950}}
+.bg{fill:var(--bg)} .frame{fill:none;stroke:var(--grid)}
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;fill:var(--ink)}
+.mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+.t{font-size:18px;font-weight:600} .s{font-size:13px;fill:var(--muted)} .ax{font-size:12px;fill:var(--muted)} .lab{font-size:12.5px} .val{font-size:12px;fill:var(--muted)}
+.opus{fill:var(--opus)} .optext{fill:var(--opus);font-weight:600} .blue{fill:var(--blue)} .grid{stroke:var(--grid);stroke-width:1}
+.ci{stroke:var(--blue);stroke-width:2.5;stroke-linecap:round} .ci.o{stroke:var(--opus)} .band{fill:var(--band)} .ref{stroke:var(--opus);stroke-width:1;stroke-dasharray:3 3}
+.hollow{fill:var(--bg);stroke:var(--blue);stroke-width:2} .iso{stroke:var(--grid);stroke-width:1;stroke-dasharray:4 4} .isot{font-size:11px;fill:var(--faint)}
+.lead{stroke:var(--faint);stroke-width:1}
+</style>
+<rect class="bg" width="760" height="450" rx="10"/>
+<rect class="frame" x="0.5" y="0.5" width="759" height="449" rx="10"/>
+<text class="t" x="24" y="38">Reliability: timeouts out of 500 calls</text>
+<text class="s" x="24" y="62">Calls that passed the 30-second limit, across all seven runs. A model that times out drops the hardest rows.</text>
+<line class="grid" x1="300.0" x2="300.0" y1="90" y2="404"/><text class="ax" x="300.0" y="422" text-anchor="middle">0</text>
+<line class="grid" x1="366.66666666666663" x2="366.66666666666663" y1="90" y2="404"/><text class="ax" x="366.66666666666663" y="422" text-anchor="middle">20</text>
+<line class="grid" x1="433.3333333333333" x2="433.3333333333333" y1="90" y2="404"/><text class="ax" x="433.3333333333333" y="422" text-anchor="middle">40</text>
+<line class="grid" x1="500.0" x2="500.0" y1="90" y2="404"/><text class="ax" x="500.0" y="422" text-anchor="middle">60</text>
+<line class="grid" x1="566.6666666666666" x2="566.6666666666666" y1="90" y2="404"/><text class="ax" x="566.6666666666666" y="422" text-anchor="middle">80</text>
+<line class="grid" x1="633.3333333333334" x2="633.3333333333334" y1="90" y2="404"/><text class="ax" x="633.3333333333334" y="422" text-anchor="middle">100</text>
+<line class="grid" x1="700.0" x2="700.0" y1="90" y2="404"/><text class="ax" x="700.0" y="422" text-anchor="middle">120</text>
+<text class="mono lab optext" x="284" y="114.0" text-anchor="end">anthropic/claude-opus-5.5</text>
+<text class="val optext" x="304.0" y="114.0">0</text>
+<text class="mono lab" x="284" y="142.0" text-anchor="end">minimax/minimax-m3</text>
+<text class="val" x="304.0" y="142.0">0</text>
+<text class="mono lab" x="284" y="170.0" text-anchor="end">nvidia/nemotron-3.5-super-vl</text>
+<rect class="blue" x="300" y="159.0" width="23.3" height="14" rx="2"/>
+<text class="val" x="329.3" y="170.0">7</text>
+<text class="mono lab" x="284" y="198.0" text-anchor="end">xiaomi/mimo-v2.6-flash</text>
+<rect class="blue" x="300" y="187.0" width="33.3" height="14" rx="2"/>
+<text class="val" x="339.3" y="198.0">10</text>
+<text class="mono lab" x="284" y="226.0" text-anchor="end">z-ai/glm-5.3-flash</text>
+<rect class="blue" x="300" y="215.0" width="36.7" height="14" rx="2"/>
+<text class="val" x="342.7" y="226.0">11</text>
+<text class="mono lab" x="284" y="254.0" text-anchor="end">xiaomi/mimo-v2.6-pro</text>
+<rect class="blue" x="300" y="243.0" width="86.7" height="14" rx="2"/>
+<text class="val" x="392.7" y="254.0">26</text>
+<text class="mono lab" x="284" y="282.0" text-anchor="end">z-ai/glm-5.3</text>
+<rect class="blue" x="300" y="271.0" width="103.3" height="14" rx="2"/>
+<text class="val" x="409.3" y="282.0">31</text>
+<text class="mono lab" x="284" y="310.0" text-anchor="end">qwen/qwen3.8-27b</text>
+<rect class="blue" x="300" y="299.0" width="113.3" height="14" rx="2"/>
+<text class="val" x="419.3" y="310.0">34</text>
+<text class="mono lab" x="284" y="338.0" text-anchor="end">deepseek/deepseek-v4.1-flash</text>
+<rect class="blue" x="300" y="327.0" width="136.7" height="14" rx="2"/>
+<text class="val" x="442.7" y="338.0">41</text>
+<text class="mono lab" x="284" y="366.0" text-anchor="end">deepseek/deepseek-v4-pro</text>
+<rect class="blue" x="300" y="355.0" width="283.3" height="14" rx="2"/>
+<text class="val" x="589.3" y="366.0">85</text>
+<text class="mono lab" x="284" y="394.0" text-anchor="end">inclusionai/ling-3.1-flash</text>
+<rect class="blue" x="300" y="383.0" width="360.0" height="14" rx="2"/>
+<text class="val" x="666.0" y="394.0">108</text>
+</svg>

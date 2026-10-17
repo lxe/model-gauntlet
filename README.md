@@ -4,6 +4,8 @@
 
 The tasks are the jobs a model does when it helps train other models: writing training answers (a teacher), grading answers against a reference (a judge), and making hard calls. Every grade comes from code, not from another model's opinion, so each score is checkable. [`src/verify.mjs`](src/verify.mjs) re-grades all 5,146 published answers with this repo's graders and gets the same grade every time.
 
+<img src="docs/img/grayzone-vs-cost.svg" width="100%" alt="Grayzone pass rate with 95% intervals per model, every interval overlapping Opus's, beside dollars per 1,000 calls: Opus $7.73, the rest $0.11 to $1.67">
+
 ## Results (2026-10-16)
 
 Scores in %. Each score is over the rows the model answered; timeouts are counted on their own. Cost is what OpenRouter billed.
@@ -42,13 +44,19 @@ Reproduce the table with `npm run report`. The answers are in [`results/2026-10-
 | deepseek/deepseek-v4-pro | 59 of 120 | 54% [42–66] | 53% | 55% |
 | minimax/minimax-m3 | 120 of 120 | 53% [44–62] | 22% | 85% |
 
+<img src="docs/img/grayzone-tradeoff.svg" alt="Scams caught against fine transfers cleared per model: Opus at 28% caught and 97% cleared; GLM-5.3 Flash and DeepSeek V4 Pro catch about 53% and clear 55-60%">
+
 Every interval overlaps Opus's. With 120 rows, no model here is measurably better or worse than Opus at this task. What differs is the trade-off: Opus is among the most cautious, clearing 97% of fine transfers but catching only 28% of scams. GLM-5.3 Flash and DeepSeek V4 Pro flag about twice as many scams and also flag far more fine transfers.
 
 ## What it says
 
+<img src="docs/img/structured-tasks.svg" alt="Scores on the five structured tasks for all eleven models: every cell between 96 and 100">
+
 - **Structured work doesn't need Opus.** Classifying, extracting fields, redacting and checking an answer against a reference: every model scored 96–100%. Opus scored 99–100%, the same as the best of the rest. For a teacher or judge on these jobs, choose on price and reliability.
 - **On hard judgment Opus is no better either.** All eleven models score 53–64% on `grayzone`, and the intervals overlap. Opus hits the same wall as models that cost a seventieth as much.
 - **Opus's advantage is reliability.** It answered every call within the 30-second limit, and so did MiniMax M3. Ling 3.1 Flash and DeepSeek V4 Pro thought past the limit on half the hard rows, even with thinking set to low. A model that times out drops exactly the hardest rows, which also flatters its score.
+<img src="docs/img/timeouts.svg" alt="Timeouts out of 500 calls per model: Opus and MiniMax M3 0, Ling 3.1 Flash 108">
+
 - **Price per call differs about 70×:** MiMo V2.6 Flash cost $0.11 per 1,000 calls and Opus 5.5 $7.73. At the default routing, MiniMax M3 ($0.55) and GLM-5.3 Flash ($0.21) are the cheap choices that also time out rarely.
 
 ### Picks
@@ -122,5 +130,7 @@ Your numbers will differ somewhat from these: hosts, load and the time limit all
 - **`classify`, `extract`, `redact`:** synthetic support tickets, receipts and texts. They were written for Pocket Model's recipes by Qwen3.8-27B. Code decided every label and field, and DeepSeek V4.1 Flash checked the classify labels and the redactions.
 - **`judge`, `judge-hard`:** built by code from `extract`-style rows (train and validation, not the test rows above).
 - **`grayzone`:** public Ethereum mainnet transfers. The phishing labels come from Forta's [labelled-datasets](https://github.com/forta-network/labelled-datasets) (MIT). Addresses are shown only as roles (CUSTOMER, DEST); the transfer's own facts and its history are described in text.
+
+Charts in [`docs/img`](docs/img) are drawn from `results/2026-10-16`.
 
 Code and data: MIT ([LICENSE](LICENSE)).
